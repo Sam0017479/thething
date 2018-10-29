@@ -1,0 +1,222 @@
+<DOCTYPE html>
+<html lang="en"><head>
+
+  
+  
+  
+  <title id="title">Meme Clicker</title>
+  
+  
+  
+  
+      <style>
+      *{
+	text-align:center;
+}
+h1{
+	height: 100px;
+	
+	
+}
+.numbers{
+	text-align:center;
+}
+.cookie{
+	height:225px;
+	width: 225px;
+	border:0px;
+	
+	background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl0XssYlqUcwo9ZIPNaagraFlEbtS4KCO8IQqT7eNp-3kpbv4rUg:https://static01.nyt.com/images/2016/09/28/us/28xp-pepefrog/28xp-pepefrog-articleLarge.jpg%3Fquality%3D75%26auto%3Dwebp%26disable%3Dupscale")
+ 
+}
+.dis{
+	background:#f92727;
+	border:0px;
+	height: 50px;
+	width: 150px;
+	margin-left:30px;
+	border-radius:5px;
+	color:white;
+	font-size:20px;
+	
+	
+}
+.mult{
+	background:#f92727;
+	border:0px;
+	height: 50px;
+	width: 150px;
+	margin-left:30px;
+	border-radius:5px;
+	color:white;
+	font-size:20px;
+	
+}
+.save{
+	background:#f92727;
+	border:0px;
+	height: 30px;
+	width: 150px;
+	margin-left:30px;
+	border-radius:5px;
+	color:white;
+	font-size:20px;
+}
+.get{
+	background:#f92727;
+	border:0px;
+	height: 50px;
+	width: 150px;
+	margin-left:30px;
+	border-radius:5px;
+	color:white;
+	font-size:20px;
+}
+    </style>
+
+  
+  
+  
+  
+
+</head>
+
+<body onload="setCook" translate="no">
+
+  <title id="title"></title>
+
+
+<div class="numbers">
+	<h2>Meme Count</h2>
+<h1 id="yeet">0</h1>
+<button class="cookie" onclick="addcookie()"></button>
+</div>
+
+
+	
+<div>
+	<br>
+<button class="mult" id="mult" onclick="mult();">Buy Multiplier 50</button>
+
+<button class="dis" id="dis" onclick="dis()">Discord Server 100</button>
+	<button class="dis" id="yt" onclick="yt()">Youtube Meme Playlist 5000</button>
+		
+  
+  
+  
+
+    <script>
+      var ycost;
+var dtime;
+var dcost;
+var mcost;
+var cookie;
+var num;
+ycost = 5000;
+dtime = 1000;
+mcost = 50;
+num = 1;
+dcost = 100;
+document.getElementById("yeet").innerHTML="0";
+function setCook(){
+	 
+		document.getElementById("yeet").innerHTML=cookie;
+	noi();
+}
+
+var cookie = 0;
+function addcookie(){
+	cookie = cookie + 1*num ;
+	
+document.getElementById("yeet").innerHTML = cookie;
+
+}
+
+//function save(){
+	//localStorage.setItem("bigcookie", cookie);
+	//localStorage.setItem("multiplyer",num);
+//}
+
+//function getOld(){
+//cookie =	document.getElementById("yeet").innerHTML = localStorage.getItem("bigcookie");
+//	var cookie = localStorage.getItem("bigcookie");
+	//num = localStorage.getItem("multiplyer");
+//}
+function mult(){
+	if(cookie >= mcost){
+	num = num + 1;
+	cookie = cookie - mcost*1;
+		mcost = mcost*2; 
+	document.getElementById("yeet").innerHTML  =cookie;
+		document.getElementById("mult").innerHTML = "Buy Multiplier "+mcost;  
+	}
+	else{
+		alert("Not Enough Memes");
+	}
+}
+function dis(){
+	if(cookie >= dcost){
+	cookie = cookie - dcost*1;
+		boi(1000);
+		dcost = dcost*2; 
+	document.getElementById("yeet").innerHTML  =cookie;
+		document.getElementById("dis").innerHTML = "Discord Server "+dcost;  
+	}
+	else{
+		alert("Not Enough Memes");
+	}
+
+function boi(){
+	addcookie();
+	setTimeout(function() {
+		requestAnimationFrame(boi);
+	}, 1000);
+}}
+
+function yt(){
+	if(cookie >= ycost){
+	cookie = cookie - ycost*1;
+		soi();
+		ycost = ycost*2; 
+	document.getElementById("yeet").innerHTML  =cookie;
+		document.getElementById("yt").innerHTML = "Youtube Meme Playlist "+ycost;  
+	}
+	else{
+		alert("Not Enough Memes");
+	}
+
+
+
+function soi(){
+	addbookie();
+	setTimeout(function() {
+		requestAnimationFrame(soi);
+	}, 1000);
+}}
+function addbookie(){
+	cookie = cookie + 1000*num ;
+	
+document.getElementById("yeet").innerHTML = cookie;
+
+}
+
+window.onkeyup = function(e) {
+   var key = e.keyCode ? e.keyCode : e.which;
+
+   if (key == 13) {
+      alert("No Pressing Enter");
+    cookie=0;
+   }
+}
+
+    </script>
+
+
+
+  
+  
+
+
+
+
+ </div></body></html>
